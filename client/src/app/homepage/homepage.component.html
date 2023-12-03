@@ -1,0 +1,22 @@
+<!-- homepage.component.html -->
+<section class="homepage">
+  <div class="feed">
+    <!-- Display posts here -->
+    <div class="post" *ngFor="let post of posts">
+      <img *ngIf="post.image" [src]="post.image" alt="Post Image">
+      <p>{{ post.content }}</p>
+      <button (click)="likePost(post)">Like</button>
+      <button (click)="commentOnPost(post)">Comment</button>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="user-info">
+      <img src="path_to_user_image" alt="User Profile Picture" class="profile-picture">
+      <span class="username">Username</span>
+    </div>
+    <div class="user-stats">
+      <p>Followers: 100</p>
+      <p>Following: 50</p>
+    </div>
+  </div>
+</section>
