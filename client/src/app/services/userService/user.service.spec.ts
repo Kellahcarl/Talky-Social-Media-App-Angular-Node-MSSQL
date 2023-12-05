@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UnsplashService } from './unsplash.service';
+import { UserService } from './user.service';
 
-describe('UnsplashService', () => {
-  let service: UnsplashService;
+describe('UserService', () => {
+  let service: UserService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(UnsplashService);
+    service = TestBed.inject(UserService);
   });
 
   it('should be created', () => {

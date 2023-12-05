@@ -1,42 +1,33 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ImagePipe } from './pipes/image.pipe';
-import { HomeComponent } from './components/home/home.component';
-import { CardComponent } from './components/card/card.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-
-import { UnsplashInterceptor } from './interceptors/unsplash.interceptor';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    CardComponent,
     NavbarComponent,
-    ImagePipe,
- 
+    LoginComponent,
+    RegisterComponent,
+    ResetPasswordComponent,
+    ForgotPasswordComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    InfiniteScrollModule,
-    NgxSpinnerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: UnsplashInterceptor,
-      multi: true,
-    },
-  ],
-  bootstrap: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
