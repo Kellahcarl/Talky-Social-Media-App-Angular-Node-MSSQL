@@ -9,9 +9,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { NewsfeedComponent } from './dashboard/newsfeed/newsfeed.component';
+import { ProfileComponent } from './dashboard/profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, LoginComponent, ForgetPasswordComponent, ResetPasswordComponent],
+  declarations: [
+    AppComponent,
+    RegisterComponent,
+    LoginComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent,
+    NavbarComponent,
+    NewsfeedComponent,
+    ProfileComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
