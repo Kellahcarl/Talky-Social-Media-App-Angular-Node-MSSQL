@@ -8,16 +8,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MinibarComponent } from './minibar/minibar.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
-import { GroupsComponent } from './groups/groups.component';
+
 import { PhotosComponent } from './photos/photos.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
-import { RegisterComponent } from './auth/register/register.component';
+
 import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { LandingComponent } from './landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from "@angular/common/http"
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,14 +26,14 @@ import {HttpClientModule} from "@angular/common/http"
     MinibarComponent,
     HomeComponent,
     MembersComponent,
-    GroupsComponent,
+    
     PhotosComponent,
     ProfileComponent,
     FooterComponent,
-    RegisterComponent,
+
     ResetPasswordComponent,
     ForgotPasswordComponent,
-    LandingComponent
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,9 +41,9 @@ import {HttpClientModule} from "@angular/common/http"
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-   HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
