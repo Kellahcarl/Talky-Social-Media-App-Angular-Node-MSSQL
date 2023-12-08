@@ -18,6 +18,7 @@ import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.
 import { LandingComponent } from './landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
     MinibarComponent,
     HomeComponent,
     MembersComponent,
-    
     PhotosComponent,
     ProfileComponent,
     FooterComponent,
-
     ResetPasswordComponent,
     ForgotPasswordComponent,
     LandingComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

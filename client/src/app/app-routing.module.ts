@@ -9,15 +9,16 @@ import { LandingComponent } from './landing/landing.component';
 
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'members', component: MembersComponent },
-  
+
   { path: 'photos', component: PhotosComponent },
   { path: 'profile', component: ProfileComponent },
   { path: '', component: LandingComponent },
-
+  { path: 'register', component: RegisterComponent },
   {
     path: 'forgot',
     component: ForgotPasswordComponent,

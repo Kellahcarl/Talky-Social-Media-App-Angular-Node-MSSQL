@@ -1,68 +1,44 @@
 html {
-    background: #e4e9f5;
-
-
+	scroll-behavior: smooth;
 }
 
-.container{
-    width: 1000px;
+
+#home-section {
+	min-height: 700px;
+	background: url('../../assets/img/home.jpg');
+	background-size: cover;
+	/* background-attachment: fixed; */
+}
+header{
+  padding-top: 0;
+}
+#home-section > .dark-overlay {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: inherit;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
-#top{
-    width:100%;
-    height: 5.25rem;
-    background: #3C5A99;
+#home-section .home-inner {
+	padding-top: 150px;
 }
 
-#bottom{
-    width: 100%;
-    height: 5rem;
-    background: white;
+#home-section .home-inner .fas, #create-section .fas {
+	color: #008ed6;
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
 }
 
-#fb-logo {
-    height: 80px;
-    width: 210px;
+#home-section .home-inner .card-form {
+	opacity: 0.8;
 }
 
-.lgnbox{
-    width: 140px;
-    height: 22px;
-}
-
-.lgnlabel {
-    color: white;
-    font-size: 0.75rem;
-}
-
-.lgnbtn {
-    background: #4f73bd;
-    border: 1px solid black;
-    color: white;
-    width: 45px;
-    height: 23px;
-    font-size: 0.68rem;
-    font-weight: 500;
-}
-
-.title {
-    color: grey;
-    font-weight: 700;
-}
-
-.form-check-label{
-    font-size: 19px;
-}
-
-#signup {
-    width: 200px;
-    border: 1px solid gray;
-}
-
-span {
-    font-weight: 600;
-}
-
-.span1 {
-    font-weight: 400;
+#explore-section .fas, #share-section .fas {
+	color: white;
+	background-color: #353535;
+	padding: 5px;
+	border-radius: 5px;
 }
