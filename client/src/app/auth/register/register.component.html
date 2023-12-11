@@ -1,133 +1,94 @@
+<section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div
+            class="card"
+            style="border-radius: 15px"
+            style="
+              background-image: linear-gradient(#04519b, #044687 60%, #033769);
+              color: white;
+            "
+          >
+            <div class="card-body p-3">
+              <h2 class="text-uppercase text-center mb-3">Create an account</h2>
 
-<div id="body">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col justify-content-start mt-3 ml-3 p-0">
-        <h1 style="font-size: 1.86rem" class="pt-5">
-          Connect with friends and the <br />
-          world around you on TALKY.
-        </h1>
-        <div class="row mt-5 align-items-center">
-          <p class="m-3">
-            <span>See photos and updates</span> from friends in News Feed.
-          </p>
-        </div>
-        <div class="row mt-4 align-items-center">
-          <p class="m-3">
-            <span>Share what's new</span> in your life on your Timeline.
-          </p>
-        </div>
-        <div class="row mt-4 align-items-center">
-          <p class="m-3 mr-0 p-0">
-            <span>Find more</span> of what you're looking for with Talky Search.
-          </p>
-        </div>
-      </div>
-      <div class="col-5">
-        <h1 class="mt-4">Sign Up</h1>
-        <h5 class="span1">It's quick and easy.</h5>
-        <form class="mt-4">
-          <div class="form-row">
-            <div class="col">
-              <input
-                type="text"
-                class="form-control my-1"
-                placeholder="First name"
-              />
+              <form>
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example1cg"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    id="form3Example1cg"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example3cg"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    id="form3Example3cg"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form4Example3cg"
+                    >Image Link</label
+                  >
+                  <input
+                    type="text"
+                    id="form4Example3cg"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example4cg"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    id="form3Example4cg"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example4cdg"
+                    >Repeat your password</label
+                  >
+                  <input
+                    type="password"
+                    id="form3Example4cdg"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="d-flex justify-content-center text-white">
+                  <button
+                    type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body text-white"
+                  >
+                    Register
+                  </button>
+                </div>
+
+                <p class="text-center mt-3 mb-0 text-white">
+                  Have already an account?
+                  <a routerLink="/login" class="fw-bold text-body"
+                    ><u class="text-white">Login here</u></a
+                  >
+                </p>
+              </form>
             </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control my-1"
-                placeholder="Last name"
-              />
-            </div>
-          </div>
-          <input
-            type="email"
-            class="form-control my-2"
-            placeholder="Email or phone number"
-          />
-          <input
-            type="password"
-            class="form-control my-2"
-            placeholder="New Password"
-          />
-
-          <div class="title" class="mb-3">Birthday</div>
-          <select id="month" name="month" class="mt-2 mr-0">
-            <option value="1998">Month</option>
-            <option value="1998">Aug</option>
-            <option value="1999">Sep</option>
-            <option value="2000">Oct</option>
-            <option value="2001">Nov</option>
-          </select>
-          <select id="date" name="date">
-            <option value="1998">Date</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-          </select>
-          <select id="year" name="year" class="mb-3">
-            <option value="1998">Year</option>
-            <option value="1998">1998</option>
-            <option value="1999">1999</option>
-            <option value="2000">2000</option>
-            <option value="2000">2001</option>
-          </select>
-
-          <div class="title" class="mb-3">Gender</div>
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="Female"
-              id="inlineRadio1"
-              value="female"
-            />
-            <label class="form-check-label mr-4" for="inlineRadio1"
-              >Female</label
-            >
-            <input
-              class="form-check-input"
-              type="radio"
-              name="Female"
-              id="inlineRadio1"
-              value="female"
-            />
-            <label class="form-check-label mr-4" for="inlineRadio1">Male</label>
-            <input
-              class="form-check-input"
-              type="radio"
-              name="Female"
-              id="inlineRadio1"
-              value="female"
-            />
-            <label class="form-check-label mr-4" for="inlineRadio1"
-              >Other</label
-            >
-          </div>
-        </form>
-        <div class="row">
-          <div class="col-10">
-            <p style="font-size: 11px" class="mt-2">
-              By clicking Sign Up, you agree to our
-              <a href="#">Terms, Data Policy</a> and
-              <a href="#">Cookies Policy</a>. You may receive SMS Notifications
-              from us and can opt out any time.
-            </p>
           </div>
         </div>
-
-        <button id="signup" type="submit" class="btn btn-success">
-          <strong>Sign Up</strong>
-        </button>
-        <hr />
-        <p style="font-size: 13px" class="mb-5">
-          <a href="#">Create a Page</a> for a celebrity, band or business.
-        </p>
       </div>
     </div>
   </div>
-</div>
+</section>

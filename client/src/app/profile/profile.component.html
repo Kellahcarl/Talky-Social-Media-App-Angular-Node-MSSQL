@@ -14,11 +14,9 @@
             </div>
             <div class="col-md-8">
               <ul>
-                <li><strong>Name:</strong>Doug Walter</li>
                 <li><strong>Email:</strong>doug@gmail.com</li>
                 <li><strong>Username:</strong>Boston</li>
-                <li><strong>Country:</strong>Massachusetts</li>
-                <li><strong>Gender:</strong>Male</li>
+
                 <button
                   type="button"
                   class="btn btn-outline-success"
@@ -37,31 +35,87 @@
                   <h3 class="panel-title">Profile Wall</h3>
                 </div>
                 <div class="panel-body">
-                  <form>
-                    <div class="form-group">
-                      <textarea
-                        class="form-control"
-                        placeholder="Write on the wall"
-                      ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-default">
-                      Submit
-                    </button>
-                    <div class="pull-right">
-                      <div class="btn-toolbar">
-                        <button type="button" class="btn btn-default">
-                          <i class="fa fa-pencil"></i>Text
-                        </button>
-                        <button type="button" class="btn btn-default">
-                          <i class="fa fa-file-image-o"></i>Image
-                        </button>
-                        <button type="button" class="btn btn-default">
-                          <i class="fa fa-file-video-o"></i>Video
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+            <div class="input-group rounded m-2 w-50">
+              <input
+                type="search"
+                class="form-control rounded"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+            <form>
+              <div class="form-group">
+                <!-- Display text area for text post -->
+                <textarea
+                  *ngIf="selectedPostType === 'text'"
+                  class="form-control"
+                  placeholder="Write on the wall"
+                ></textarea>
+
+                <!-- Display text area for image post -->
+                <textarea
+                  *ngIf="selectedPostType === 'image'"
+                  class="form-control"
+                  placeholder="Write a caption"
+                ></textarea>
+                <input
+                  *ngIf="selectedPostType === 'image'"
+                  type="text"
+                  class="form-control mt-2"
+                  placeholder="Image URL"
+                />
+
+                <!-- Display text area for video post -->
+                <textarea
+                  *ngIf="selectedPostType === 'video'"
+                  class="form-control"
+                  placeholder="Write a caption"
+                ></textarea>
+                <input
+                  *ngIf="selectedPostType === 'video'"
+                  type="text"
+                  class="form-control mt-2"
+                  placeholder="Video URL"
+                />
+              </div>
+
+              <div class="post-options">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  (click)="selectedPostType = 'text'"
+                >
+                  <i class="fa fa-pencil"></i>Text
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  (click)="selectedPostType = 'image'"
+                >
+                  <i class="fa fa-file-image-o"></i>Image
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  (click)="selectedPostType = 'video'"
+                >
+                  <i class="fa fa-file-video-o"></i>Video
+                </button>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-primary my-2"
+                (click)="onSubmit()"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
               </div>
             </div>
           </div>
@@ -177,36 +231,42 @@
   </div>
   <div class="offcanvas-body">
     <form>
-      <div class="mb-3">
-        <label for="dateOfBirth">Date of birth</label>
-        <div class="input-group">
-          <input
-            id="dateOfBirth"
-            class="form-control"
-            placeholder="yyyy-mm-dd"
-            name="dp"
-            ngbDatepicker
-            #dp="ngbDatepicker"
-          />
-          <button
-            class="btn btn-outline-secondary bi bi-calendar3"
-            (click)="dp.toggle()"
-            type="button"
-          ></button>
-        </div>
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form3Example1cg">Username</label>
+        <input
+          type="text"
+          id="form3Example1cg"
+          class="form-control form-control-lg"
+        />
+      </div>
+
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form3Example3cg">Your Email</label>
+        <input
+          type="email"
+          id="form3Example3cg"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form4Example3cg">Image Link</label>
+        <input
+          type="text"
+          id="form4Example3cg"
+          class="form-control form-control-lg"
+        />
+      </div>
+
+      <div class="d-flex justify-content-center text-white">
+        <button
+          type="button"
+          class="btn btn-outline-success btn-block btn-lg gradient-custom-4 text-body"
+          (click)="offcanvas.close('Save click')"
+        >
+          Save details
+        </button>
       </div>
     </form>
-    <div class="text-end">
-      <button
-        type="button"
-        class="btn btn-outline-dark"
-        (click)="offcanvas.close('Save click')"
-      >
-        Save
-      </button>
-    </div>
   </div>
 </ng-template>
 <hr />
-
-
